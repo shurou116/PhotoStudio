@@ -17,6 +17,7 @@ import hashlib
 import secrets
 from dataclasses import dataclass
 from datetime import datetime
+from pathlib import Path
 
 from .config import users_csv
 
@@ -34,7 +35,7 @@ class UserStore:
 
     def __init__(self, path=None):
         # path参数是给测试用的，平时不传就走config里的默认位置
-        self.path = path or users_csv()
+        self.path = Path(path) if path else users_csv()
         self.users = {}          # username -> 原始行数据dict
         self._load()
 
