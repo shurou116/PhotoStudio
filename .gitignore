@@ -1,0 +1,21 @@
+# Python运行时产生的垃圾
+__pycache__/
+*.pyc
+*.pyo
+
+# 打包过程的中间产物，成品放dist
+build/
+*.spec
+
+# PyInstaller输出的exe不进git，体积太大，本地留着就行
+dist/
+
+# 用户数据和测试输出，属于运行时生成的东西
+data/users.csv
+data/exports/
+
+# 编辑器/系统杂物
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
